@@ -1,0 +1,7 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+    // spawn-at-startup "noctalia"
+    spawn-sh-at-startup "waybar"
+    spawn-sh-at-startup "swaybg -i ~/Pictures/wallpapers/interstellar.png"
+    spawn-sh-at-startup "/usr/bin/kanshi"

@@ -1,0 +1,48 @@
+blacklist = [".config",'.ssh','.local','Downloads']
+
+sort_order = [
+  "tmux",
+  'wildcard'
+]
+
+strict_mode = false
+terminal = "ghostty"
+dir_length = 1
+
+
+[default_session]
+startup_command = ""
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "nvim"
+startup_command = "cd .config/nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "Dotfiles"
+startup_command = "cd .config"
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = 'Obsidian'
+startup_command = "cd Documents/ObVault"
+
+[[session]]
+name = "Documents"
+startup_command = "cd Documents"
+
+[[session]]
+name = "Blog"
+startup_commmand = "cd Projects/Blog"
+
+
+[[wildcard]]
+pattern = "~/Documents/*"
+startup_command = "nvim"
+
+
+[[wildcard]]
+pattern = "~/Projects/*"
+startup_command = "nvim"
+
