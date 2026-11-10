@@ -13,3 +13,8 @@ pulse/*
 spotify/*
 uv/*
 
+nvim/.git
+nvim/forks/otter.nvim/
+tmux/plugins/tpm/
+tmux/plugins/tmux-continuum/
+tmux/plugins/tmux-resurrect/
