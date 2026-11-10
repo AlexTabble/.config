@@ -1,0 +1,64 @@
+profile "laptop" {
+  output "eDP-1" {
+    mode 1920x1200
+    position 0,0
+    enable
+  }
+}
+
+profile "dvi" {
+  output "DVI-I-1" {
+    mode 1920x1080
+    position 0,0
+    enable
+  }
+
+  output "eDP-1" {
+    disable
+  }
+}
+
+
+profile "hdmi" {
+  output "HDMI-A-1" {
+    mode 1920x1200
+    position 0,0
+    enable
+  }
+
+  output "eDP-1" {
+    disable
+  }
+}
+
+profile "dual" {
+  output "DVI-I-1" {
+    mode 1920x1080
+    position 0,0
+    enable
+  }
+  output "eDP-1" {
+    mode 1920x1200
+    position 1920,0
+    enable
+  }
+}
+
+profile "dual-hdmi" {
+  output "eDP-1" {
+    mode 1920x1200
+    position 1920,0
+    enable
+  }
+  output "HDMI-A-1" {
+    mode 1920x1200
+    position 0,0
+    enable
+  }
+}
+
+profile "mirror" {
+    output HDMI-A-1 enable mode 1920x1200 position 0,0
+    output eDP-1 enable mode 1920x1200 position 1920,0
+     exec wl-present mirror eDP-1 --fullscreen-output HDMI-A-1 --fullscreen
+}

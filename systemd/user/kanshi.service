@@ -1,0 +1,12 @@
+[Unit]
+Description=Kanshi output auto-profile manager
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kanshi -c %h/.config/kanshi/config.kdl
+Restart=always
+PassEnvironment=WAYLAND_DISPLAY XDG_RUNTIME_DIR
+
+[Install]
+WantedBy=graphical-session.target
