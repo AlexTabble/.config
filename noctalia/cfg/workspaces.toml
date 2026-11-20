@@ -1,0 +1,22 @@
+[widget.workspaces]
+colorize_icons = false
+style = "minimal"       # regular | minimal | focus_hint
+show_labels = true      # false = unlabeled pills (Focus Hint: app icon only)
+show_icons = true       # focus_hint only; false = active pill without the focused app icon
+separator = ""         # e.g. "|" or "·"; empty adds no separator or extra spacing
+separator_color = "on_surface"  # color role or hex color, e.g. "#ff8800"
+label_source = "id"     # id | name
+max_label_chars = 9     # truncate long workspace names (e.g. "VESKTOP" → "VE")
+show_tooltip = false # false = no full-name tooltip on hover
+labels_only_when_occupied = false # (1) (2*) ( ) (4) - occupied tags and the active tag show labels (*active but empty)
+hide_when_empty = false
+monitors = []           # e.g. ["DP-3", "DP-2"]; ["*"] = every monitor, this bar's monitor first
+pill_scale = 1.0
+active_pill_size = 2.5
+inactive_pill_size = 1.0
+focused_color = "04d1d1"
+occupied_color = "secondary"
+empty_color = "surface_container"
+urgent_color = "error"
+change_color_on_hover = true  # false = keep configured workspace colors while hovering
+focused_output_only = false  # true = only the focused monitor highlights its active workspace
